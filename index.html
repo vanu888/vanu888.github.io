@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user@vihanga_anuththara:~/portfolio</title>
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --bg-color: #0d1117;     /* GitHub Dark Dimmed */
+            --card-bg: #161b22;      /* Lighter dark */
+            --accent: #00ff9d;       /* Terminal Green */
+            --accent-dim: rgba(0, 255, 157, 0.1);
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --border: #30363d;
+            --font-mono: 'Fira Code', 'Courier New', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- NAVBAR (Fake Terminal Header) --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .logo::before { content: "~/ "; color: var(--text-muted); }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* --- HERO SECTION (Typing Effect) --- */
+        .hero {
+            padding: 60px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .prompt { color: var(--accent); margin-bottom: 10px; display: block; }
+        
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .typing-text {
+            border-right: 3px solid var(--accent);
+            white-space: nowrap;
+            overflow: hidden;
+            animation: blink 0.75s step-end infinite;
+        }
+
+        @keyframes blink { 50% { border-color: transparent; } }
+
+        .bio {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px var(--accent);
+        }
+
+        /* --- SECTIONS --- */
+        section { margin-bottom: 100px; }
+        
+        .section-header {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .section-header::after {
+            content: ''; flex: 1; height: 1px; background: var(--border); margin-left: 20px;
+        }
+        .section-header::before {
+            content: './'; color: var(--accent); margin-right: 5px;
+        }
+
+        /* --- TOOLS GRID (Cards) --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 25px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .card h3 { color: white; margin-bottom: 10px; font-size: 1.2rem; }
+        .card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; }
+        
+        /* Command Line Tags */
+        .tags span {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            border-radius: 4px;
+        }
+        .card:hover .tags span { color: var(--accent); }
+
+        /* --- TECH STACK (Code Block Style) --- */
+        .code-block {
+            background: #000;
+            padding: 20px;
+            border-left: 3px solid var(--accent);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+        .comment { color: #6a737d; }
+        .keyword { color: #ff7b72; }
+        .string { color: #a5d6ff; }
+        .function { color: #d2a8ff; }
+
+        /* --- CONTACT --- */
+        .footer {
+            text-align: center;
+            padding: 50px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <nav>
+            <a href="#" class="logo">user@vihanga_anuththara</a>
+            <div class="nav-links">
+                <a href="#about">_about</a>
+                <a href="#stack">_tech_stack</a>
+                <a href="#projects">_projects</a>
+                <a href="https://linkedin.com/in/vihanga-anuththara" style="color:var(--accent)">./contact_me.sh</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <span class="prompt">root@linux-machine:~$ whoami</span>
+            <h1>
+                HNDIT Undergraduate <br>
+                <span class="typing-text">Linux & Automation_</span>
+            </h1>
+            <p class="bio">
+                Building efficient systems with Python, Bash, and Java. <br>
+                Obsessed with CLI workflows, DevOps, and Open Source.
+            </p>
+            <div>
+                <a href="#projects" class="btn">Execute Projects ></a>
+            </div>
+        </header>
+
+        <section id="stack">
+            <h2 class="section-header">skills_matrix.json</h2>
+            
+            <div class="code-block">
+                <p><span class="comment">// Current workspace configuration</span></p>
+                <p><span class="keyword">const</span> <span class="function">myToolbox</span> = {</p>
+                <p>&nbsp;&nbsp;<span class="string">"OS"</span>: [<span class="string">"MX Linux"</span>, <span class="string">"Debian"</span>],</p>
+                <p>&nbsp;&nbsp;<span class="string">"Languages"</span>: [<span class="string">"Python"</span>, <span class="string">"Java"</span>, <span class="string">"Bash"</span>],</p>
+                <p>&nbsp;&nbsp;<span class="string">"Editors"</span>: [<span class="string">"VS Code"</span>, <span class="string">"Micro"</span>, <span class="string">"Nano"</span>],</p>
+                <p>&nbsp;&nbsp;<span class="string">"DevOps"</span>: [<span class="string">"Git"</span>, <span class="string">"Docker"</span>, <span class="string">"VirtualBox"</span>],</p>
+                <p>&nbsp;&nbsp;<span class="string">"Learning"</span>: <span class="string">"Cybersecurity & System Admin"</span></p>
+                <p>};</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-header">git_repos</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>HMMSystem</h3>
+                    <p>This Python program is designed to manage medicine inventory in a hospital setting. It provides a user-friendly interface for tracking medicines, generating reports, and maintaining records efficiently. It serves as a practical solution for digitizing pharmacy operations and minimizing manual data entry errors.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>JSON</span>
+                        <span>Tkinter</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>YT-Automate</h3>
+                    <p>A simple automation script designed to simplify the yt-dlp CLI. It handles format selection, best-quality merging, and metadata embedding automatically, removing the need to remember complex command-line flags. Just run the script and let it handle the heavy lifting of configuration.</p>
+                   <div class="tags">
+                        <span>Python</span>
+                        <span>Bash</span>
+                        <span>Automation</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>ELSA-Chat_Application </h3>
+                    <p>A Python Tkinter chatbot that talks back. ELSA combines a clean GUI with text-to-speech capabilities, image display, and instant responses to predefined commands. It serves as an excellent foundation for understanding desktop GUI development and basic interaction logic.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Pillow</span>
+                        <span>pyttsx3</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="section-header">education.log</h2>
+            <div class="card">
+                <span style="color:var(--accent)">[2024 - Present]</span> <strong>Higher National Diploma in IT</strong>
+                <p style="margin-top:5px; color:var(--text-muted)">> Institute: SLIATE</p>
+                <p style="margin-top:5px; color:var(--text-muted)">> Focus: Software Engineering & Networking</p>
+                <p style="margin-top:5px; color:var(--text-muted)">> Status: Final Year (GPA: 3.X)</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>echo "Thanks for visiting."</p>
+            <p style="margin-top:10px;">
+                <a href="https://github.com/vanu888" style="color:var(--text-main); margin:0 10px; text-decoration:none;">[GitHub]</a>
+                <a href="https://linkedin.com/in/vihanga-anuththara" style="color:var(--text-main); margin:0 10px; text-decoration:none;">[LinkedIn]</a>
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
