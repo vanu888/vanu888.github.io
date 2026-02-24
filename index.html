@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <style>
         /* --- CORE VARIABLES --- */
         :root {
-            --bg-color: #0d1117;     /* GitHub Dark Dimmed */
-            --card-bg: #161b22;      /* Lighter dark */
-            --accent: #00ff9d;       /* Terminal Green */
+            --bg-color: #0d1117;
+            /* GitHub Dark Dimmed */
+            --card-bg: #161b22;
+            /* Lighter dark */
+            --accent: #00ff9d;
+            /* Terminal Green */
             --accent-dim: rgba(0, 255, 157, 0.1);
             --text-main: #c9d1d9;
             --text-muted: #8b949e;
@@ -17,7 +21,11 @@
             --font-mono: 'Fira Code', 'Courier New', monospace;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             background-color: var(--bg-color);
@@ -50,7 +58,11 @@
             color: var(--accent);
             text-decoration: none;
         }
-        .logo::before { content: "~/ "; color: var(--text-muted); }
+
+        .logo::before {
+            content: "~/ ";
+            color: var(--text-muted);
+        }
 
         .nav-links a {
             margin-left: 20px;
@@ -59,7 +71,10 @@
             font-size: 0.9rem;
             transition: 0.3s;
         }
-        .nav-links a:hover { color: var(--accent); }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
 
         /* --- HERO SECTION (Typing Effect) --- */
         .hero {
@@ -70,8 +85,12 @@
             justify-content: center;
         }
 
-        .prompt { color: var(--accent); margin-bottom: 10px; display: block; }
-        
+        .prompt {
+            color: var(--accent);
+            margin-bottom: 10px;
+            display: block;
+        }
+
         h1 {
             font-size: 3.5rem;
             line-height: 1.2;
@@ -86,7 +105,11 @@
             animation: blink 0.75s step-end infinite;
         }
 
-        @keyframes blink { 50% { border-color: transparent; } }
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
 
         .bio {
             font-size: 1.1rem;
@@ -115,8 +138,10 @@
         }
 
         /* --- SECTIONS --- */
-        section { margin-bottom: 100px; }
-        
+        section {
+            margin-bottom: 100px;
+        }
+
         .section-header {
             font-size: 1.5rem;
             color: white;
@@ -124,11 +149,19 @@
             display: flex;
             align-items: center;
         }
+
         .section-header::after {
-            content: ''; flex: 1; height: 1px; background: var(--border); margin-left: 20px;
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+            margin-left: 20px;
         }
+
         .section-header::before {
-            content: './'; color: var(--accent); margin-right: 5px;
+            content: './';
+            color: var(--accent);
+            margin-right: 5px;
         }
 
         /* --- TOOLS GRID (Cards) --- */
@@ -151,9 +184,18 @@
             transform: translateY(-5px);
         }
 
-        .card h3 { color: white; margin-bottom: 10px; font-size: 1.2rem; }
-        .card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; }
-        
+        .card h3 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
         /* Command Line Tags */
         .tags span {
             display: inline-block;
@@ -164,7 +206,10 @@
             margin-right: 5px;
             border-radius: 4px;
         }
-        .card:hover .tags span { color: var(--accent); }
+
+        .card:hover .tags span {
+            color: var(--accent);
+        }
 
         /* --- TECH STACK (Code Block Style) --- */
         .code-block {
@@ -174,10 +219,22 @@
             font-family: var(--font-mono);
             font-size: 0.9rem;
         }
-        .comment { color: #6a737d; }
-        .keyword { color: #ff7b72; }
-        .string { color: #a5d6ff; }
-        .function { color: #d2a8ff; }
+
+        .comment {
+            color: #6a737d;
+        }
+
+        .keyword {
+            color: #ff7b72;
+        }
+
+        .string {
+            color: #a5d6ff;
+        }
+
+        .function {
+            color: #d2a8ff;
+        }
 
         /* --- CONTACT --- */
         .footer {
@@ -190,15 +247,23 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .nav-links { display: none; } /* Simplified for mobile */
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            /* Simplified for mobile */
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        
+
         <nav>
             <a href="#" class="logo">user@vihanga_anuththara</a>
             <div class="nav-links">
@@ -226,26 +291,34 @@
 
         <section id="stack">
             <h2 class="section-header">skills_matrix.json</h2>
-            
+
             <div class="code-block">
                 <p><span class="comment">// Current workspace configuration</span></p>
                 <p><span class="keyword">const</span> <span class="function">myToolbox</span> = {</p>
-                <p>&nbsp;&nbsp;<span class="string">"OS"</span>: [<span class="string">"MX Linux"</span>, <span class="string">"Debian"</span>],</p>
-                <p>&nbsp;&nbsp;<span class="string">"Languages"</span>: [<span class="string">"Python"</span>, <span class="string">"Java"</span>, <span class="string">"Bash"</span>],</p>
-                <p>&nbsp;&nbsp;<span class="string">"Editors"</span>: [<span class="string">"VS Code"</span>, <span class="string">"Micro"</span>, <span class="string">"Nano"</span>],</p>
-                <p>&nbsp;&nbsp;<span class="string">"DevOps"</span>: [<span class="string">"Git"</span>, <span class="string">"Docker"</span>, <span class="string">"VirtualBox"</span>],</p>
-                <p>&nbsp;&nbsp;<span class="string">"Learning"</span>: <span class="string">"Cybersecurity & System Admin"</span></p>
+                <p>&nbsp;&nbsp;<span class="string">"OS"</span>: [<span class="string">"Linux"</span>, <span
+                        class="string">"Debian"</span>],</p>
+                <p>&nbsp;&nbsp;<span class="string">"Languages"</span>: [<span class="string">"Python"</span>, <span
+                        class="string">"Java"</span>, <span class="string">"Bash"</span>],</p>
+                <p>&nbsp;&nbsp;<span class="string">"Editors"</span>: [<span class="string">"VS Code"</span>, <span
+                        class="string">"Micro"</span>, <span class="string">"Nano"</span>],</p>
+                <p>&nbsp;&nbsp;<span class="string">"DevOps"</span>: [<span class="string">"Git"</span>, <span
+                        class="string">"Docker"</span>, <span class="string">"VirtualBox"</span>],</p>
+                <p>&nbsp;&nbsp;<span class="string">"Learning"</span>: <span class="string">"Cybersecurity & System
+                        Admin"</span></p>
                 <p>};</p>
             </div>
         </section>
 
         <section id="projects">
             <h2 class="section-header">git_repos</h2>
-            
+
             <div class="grid">
                 <div class="card">
                     <h3>HMMSystem</h3>
-                    <p>This Python program is designed to manage medicine inventory in a hospital setting. It provides a user-friendly interface for tracking medicines, generating reports, and maintaining records efficiently. It serves as a practical solution for digitizing pharmacy operations and minimizing manual data entry errors.</p>
+                    <p>This Python program is designed to manage medicine inventory in a hospital setting. It provides a
+                        user-friendly interface for tracking medicines, generating reports, and maintaining records
+                        efficiently. It serves as a practical solution for digitizing pharmacy operations and minimizing
+                        manual data entry errors.</p>
                     <div class="tags">
                         <span>Python</span>
                         <span>JSON</span>
@@ -255,8 +328,11 @@
 
                 <div class="card">
                     <h3>YT-Automate</h3>
-                    <p>A simple automation script designed to simplify the yt-dlp CLI. It handles format selection, best-quality merging, and metadata embedding automatically, removing the need to remember complex command-line flags. Just run the script and let it handle the heavy lifting of configuration.</p>
-                   <div class="tags">
+                    <p>A simple automation script designed to simplify the yt-dlp CLI. It handles format selection,
+                        best-quality merging, and metadata embedding automatically, removing the need to remember
+                        complex command-line flags. Just run the script and let it handle the heavy lifting of
+                        configuration.</p>
+                    <div class="tags">
                         <span>Python</span>
                         <span>Bash</span>
                         <span>Automation</span>
@@ -265,7 +341,9 @@
 
                 <div class="card">
                     <h3>ELSA-Chat_Application </h3>
-                    <p>A Python Tkinter chatbot that talks back. ELSA combines a clean GUI with text-to-speech capabilities, image display, and instant responses to predefined commands. It serves as an excellent foundation for understanding desktop GUI development and basic interaction logic.</p>
+                    <p>A Python Tkinter chatbot that talks back. ELSA combines a clean GUI with text-to-speech
+                        capabilities, image display, and instant responses to predefined commands. It serves as an
+                        excellent foundation for understanding desktop GUI development and basic interaction logic.</p>
                     <div class="tags">
                         <span>Python</span>
                         <span>Pillow</span>
@@ -288,12 +366,15 @@
         <footer class="footer">
             <p>echo "Thanks for visiting."</p>
             <p style="margin-top:10px;">
-                <a href="https://github.com/vanu888" style="color:var(--text-main); margin:0 10px; text-decoration:none;">[GitHub]</a>
-                <a href="https://linkedin.com/in/vihanga-anuththara" style="color:var(--text-main); margin:0 10px; text-decoration:none;">[LinkedIn]</a>
+                <a href="https://github.com/vanu888"
+                    style="color:var(--text-main); margin:0 10px; text-decoration:none;">[GitHub]</a>
+                <a href="https://linkedin.com/in/vihanga-anuththara"
+                    style="color:var(--text-main); margin:0 10px; text-decoration:none;">[LinkedIn]</a>
             </p>
         </footer>
 
     </div>
 
 </body>
+
 </html>
