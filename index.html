@@ -29,7 +29,6 @@
       color: var(--text);
       font-family: 'Syne', sans-serif;
       overflow-x: hidden;
-      cursor: none;
     }
 
     /* Custom Cursor */
@@ -237,7 +236,7 @@
       letter-spacing: 0.15em;
     }
 
-    /* ABOUT */
+    /* SECTIONS */
     section { padding: 100px 60px; position: relative; z-index: 1; }
     .section-label {
       font-family: 'JetBrains Mono', monospace;
@@ -260,7 +259,7 @@
       margin-bottom: 60px;
     }
 
-    /* ABOUT GRID */
+    /* ABOUT */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -333,9 +332,7 @@
     .skill-group:hover::before { transform: scaleX(1); }
     .skill-group:hover { border-color: rgba(0,212,255,0.3); }
 
-    .skill-group-icon {
-      font-size: 28px; margin-bottom: 16px;
-    }
+    .skill-group-icon { font-size: 28px; margin-bottom: 16px; }
     .skill-group-name {
       font-size: 16px; font-weight: 700;
       margin-bottom: 20px;
@@ -372,7 +369,6 @@
       position: relative;
       overflow: hidden;
       transition: all 0.3s;
-      group: true;
     }
     .project-card::after {
       content: '';
@@ -422,7 +418,7 @@
     }
     .project-link:hover { gap: 10px; }
 
-    /* TERMINAL BLOCK */
+    /* TERMINAL */
     .terminal {
       background: #060a10;
       border: 1px solid var(--border);
@@ -447,7 +443,8 @@
     }
     .terminal-body { padding: 24px; }
     .terminal-line {
-      font-size: 13px; line-height: 1.7; display: flex; gap: 12px;
+      font-size: 13px; line-height: 1.7;
+      display: flex; gap: 12px;
     }
     .terminal-line .prompt { color: var(--accent3); }
     .terminal-line .cmd { color: var(--text); }
@@ -506,7 +503,6 @@
     }
     .connect-icon svg { width: 22px; height: 22px; fill: var(--muted); transition: fill 0.3s; }
     .connect-card:hover .connect-icon svg { fill: var(--accent); }
-    .connect-info {}
     .connect-name {
       font-size: 16px; font-weight: 700;
       margin-bottom: 4px;
@@ -568,7 +564,6 @@
       transform: translateY(0);
     }
 
-    /* Scanline effect on hero */
     .hero::before {
       content: '';
       position: absolute; left: 0; right: 0; height: 3px;
@@ -577,7 +572,6 @@
       pointer-events: none;
     }
 
-    /* Glowing orbs */
     .orb {
       position: absolute;
       border-radius: 50%;
@@ -596,6 +590,7 @@
       top: 60%; right: 0;
     }
 
+    /* MOBILE */
     @media (max-width: 768px) {
       /* NAV */
       nav { padding: 16px 20px; }
@@ -627,9 +622,7 @@
       .arch-badge { display: none; }
 
       /* SECTIONS */
-      section {
-        padding: 60px 20px;
-      }
+      section { padding: 60px 20px; }
       .section-title {
         font-size: 28px;
         margin-bottom: 36px;
@@ -670,9 +663,7 @@
         grid-template-columns: 1fr;
         gap: 2px;
       }
-      .connect-card {
-        padding: 24px;
-      }
+      .connect-card { padding: 24px; }
       .connect-card:hover { padding-left: 24px; }
 
       /* TERMINAL */
@@ -685,6 +676,26 @@
         flex-direction: column;
         gap: 8px;
         text-align: center;
+      }
+
+      /* Consistent alignment with hero */
+      .skills-grid,
+      .projects-grid,
+      .connect-grid,
+      .about-grid,
+      .about-stats,
+      .terminal {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .project-card,
+      .skill-group,
+      .connect-card,
+      .stat-card {
+        width: 100%;
+        box-sizing: border-box;
       }
     }
 
