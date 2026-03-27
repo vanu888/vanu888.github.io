@@ -8,15 +8,6 @@
 
 > A responsive, CLI-inspired digital resume showcasing my skills in Software Engineering, DevOps, and System Administration.
 
-## 🚀 Features
-
-* **Terminal Aesthetic:** Dark mode design inspired by VS Code and Linux terminals.
-* **Typing Animation:** CSS-based typing effect in the hero section.
-* **Syntax Highlighting:** "Skills" section styled as a JSON code block.
-* **Integrated Socials:** Centralized hub for LinkedIn, GitHub.
-* **Responsive:** Fully optimized for mobile and desktop screens.
-* **Pure Code:** Built with semantic HTML5 and CSS3 (No Bootstrap, No JS frameworks).
-
 ## 📂 Directory Structure
 
 ```bash
