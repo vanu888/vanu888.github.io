@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
       --bg: #0b0e14;
@@ -145,7 +145,7 @@
 
     .hero h1 {
       font-family: 'Syne', sans-serif;
-      font-size: clamp(52px, 8vw, 100px);
+      font-size: clamp(36px, 6vw, 100px);
       font-weight: 800;
       line-height: 0.95;
       letter-spacing: -0.03em;
@@ -592,19 +592,21 @@
 
     /* MOBILE */
     @media (max-width: 768px) {
-      /* NAV */
       nav { padding: 16px 20px; }
       .nav-links { display: none; }
 
-      /* HERO */
       .hero {
         padding: 100px 20px 60px;
         min-height: 100svh;
       }
       .hero h1 {
-        font-size: 48px;
-        line-height: 1;
+        font-size: clamp(28px, 8.5vw, 48px);
+        line-height: 1.05;
         margin-bottom: 20px;
+      }
+      .hero h1 .accent-word {
+        font-size: clamp(26px, 8vw, 44px);
+        letter-spacing: -0.04em;
       }
       .hero-desc {
         font-size: 13px;
@@ -621,14 +623,12 @@
       }
       .arch-badge { display: none; }
 
-      /* SECTIONS */
       section { padding: 60px 20px; }
       .section-title {
         font-size: 28px;
         margin-bottom: 36px;
       }
 
-      /* ABOUT */
       .about-grid {
         grid-template-columns: 1fr;
         gap: 36px;
@@ -639,14 +639,12 @@
       }
       .stat-num { font-size: 32px; }
 
-      /* SKILLS */
       .skills-grid {
         grid-template-columns: 1fr;
         gap: 2px;
       }
       .skill-group { padding: 24px; }
 
-      /* PROJECTS */
       .projects-grid {
         grid-template-columns: 1fr;
         gap: 2px;
@@ -658,7 +656,6 @@
         gap: 16px;
       }
 
-      /* CONNECT */
       .connect-grid {
         grid-template-columns: 1fr;
         gap: 2px;
@@ -666,11 +663,9 @@
       .connect-card { padding: 24px; }
       .connect-card:hover { padding-left: 24px; }
 
-      /* TERMINAL */
       .terminal-body { padding: 16px; }
       .terminal-line { font-size: 11px; }
 
-      /* FOOTER */
       footer {
         padding: 24px 20px;
         flex-direction: column;
@@ -678,7 +673,6 @@
         text-align: center;
       }
 
-      /* Consistent alignment with hero */
       .skills-grid,
       .projects-grid,
       .connect-grid,
@@ -701,7 +695,13 @@
 
     /* Extra small */
     @media (max-width: 380px) {
-      .hero h1 { font-size: 38px; }
+      .hero h1 {
+        font-size: clamp(24px, 7.5vw, 36px);
+      }
+      .hero h1 .accent-word {
+        font-size: clamp(22px, 7vw, 32px);
+        letter-spacing: -0.05em;
+      }
       .about-stats { grid-template-columns: 1fr; }
       .tag { font-size: 10px; padding: 4px 10px; }
     }
@@ -733,7 +733,7 @@
     <div class="hero-tag">Available for internships &amp; collaborations</div>
     <h1>
       <span class="line">Vihanga</span>
-      <span class="line accent-word">Anuththara.</span>
+      <span class="line accent-word">Anuththara</span>
       <span class="line">Developer.</span>
     </h1>
     <p class="hero-desc">
