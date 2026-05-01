@@ -1,7 +1,6 @@
 # root@vanu888:~/portfolio
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
@@ -13,8 +12,7 @@
 ```bash
 .
 ├── index.html       # Main structure, content, and social links
-├── CNAME            # Custom domain configuration (Optional)
-├── LICENSE          # MIT License terms and usage rights
+├── CNAME            # Custom domain configuration
 └── README.md        # Documentation
 ```
 
@@ -25,10 +23,5 @@ You can find my professional links directly on the Live Site, or connect with me
 - **GitHub:** [https://github.com/vanu888](https://github.com/vanu888)
 
 ---
-
-## 📄 License
-
-This project is licensed under the **MIT License.**  
-See [LICENSE](LICENSE) for more information. 
 
 
