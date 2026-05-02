@@ -205,37 +205,6 @@
       transform: translateY(-2px);
     }
 
-    /* Floating arch badge */
-    .arch-badge {
-      position: absolute;
-      right: 80px; top: 50%;
-      transform: translateY(-50%);
-      opacity: 0; animation: fadeIn 1s 1s forwards;
-    }
-    .arch-badge-inner {
-      width: 180px; height: 180px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 8px;
-      position: relative;
-      animation: rotate 20s linear infinite;
-    }
-    .arch-badge-inner::before {
-      content: '';
-      position: absolute; inset: -10px;
-      border-radius: 50%;
-      border: 1px dashed rgba(0,212,255,0.2);
-    }
-    .arch-badge-inner svg { width: 48px; height: 48px; }
-    .arch-badge-inner span {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      color: var(--accent);
-      letter-spacing: 0.15em;
-    }
-
     /* SECTIONS */
     section { padding: 100px 60px; position: relative; z-index: 1; }
     .section-label {
@@ -621,7 +590,6 @@
         justify-content: center;
         padding: 16px 20px;
       }
-      .arch-badge { display: none; }
 
       section { padding: 60px 20px; }
       .section-title {
@@ -750,15 +718,6 @@
     </div>
   </div>
 
-  <div class="arch-badge">
-    <div class="arch-badge-inner">
-      <!-- Arch Linux SVG icon -->
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2L3 19h4l1.5-3.5h7L17 19h4L12 2zm0 5l2.5 6h-5L12 7z" fill="#00d4ff"/>
-      </svg>
-      <span>Arch Linux</span>
-    </div>
-  </div>
 </section>
 
 <!-- ABOUT -->
@@ -1074,7 +1033,6 @@
 <!-- FOOTER -->
 <footer>
   <p>© 2026 <span>Vihanga Anuththara</span> · Built with HTML, CSS &amp; zero frameworks</p>
-  <p>I use <span>Arch Linux</span> · btw</p>
 </footer>
 
 <script>
