@@ -636,6 +636,12 @@
         display: none;
       }
 
+      .nav-links a[href^="http"]::after {
+        content: ' ↗';
+        font-size: 12px;
+        opacity: 0.6;
+      }
+
       .skill-name {
         width: 100px;
         font-size: 13px;
@@ -667,6 +673,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="https://vihangaanuththara.me/vazero" target="_blank" rel="noopener">Freelance ↗</a></li>
       </ul>
     </div>
   </nav>
