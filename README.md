@@ -20,8 +20,6 @@
 
 You can find my professional links directly on the Live Site, or connect with me here:
 
-- **GitHub:** [https://github.com/vanu888](https://github.com/vanu888)
+- **GitHub:** [https://github.com/vihanga-anuththara](https://github.com/vihanga-anuththara)
 
 ---
-
-
